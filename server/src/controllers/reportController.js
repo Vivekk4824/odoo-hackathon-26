@@ -4,6 +4,8 @@ import Asset from "../models/Asset.js";
 import Allocation from "../models/Allocation.js";
 import Booking from "../models/Booking.js";
 import Maintenance from "../models/Maintenance.js";
+import createNotification from "../utils/createNotification.js";
+import createActivityLog from "../utils/createActivityLog.js";
 
 export const getReportDashboard = asyncHandler(async (req, res) => {
     const today = new Date();

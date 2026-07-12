@@ -15,6 +15,8 @@ import maintenanceRoutes from "./routes/maintenanceRoutes.js";
 import auditRoutes from "./routes/auditRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import reportRoutes from "./routes/reportRoutes.js";
+import notificationRoutes from "./routes/notificationRoutes.js";
+import activityLogRoutes from "./routes/activityLogRoutes.js";
 
 const app = express();
 
@@ -41,6 +43,9 @@ app.use("/api/maintenances", maintenanceRoutes);
 app.use("/api/audits", auditRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/reports", reportRoutes);
+app.use("/api/notifications", notificationRoutes);
+
+app.use("/api/activity-logs", activityLogRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

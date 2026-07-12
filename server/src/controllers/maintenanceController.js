@@ -2,6 +2,8 @@ import asyncHandler from "express-async-handler";
 
 import Maintenance from "../models/Maintenance.js";
 import Asset from "../models/Asset.js";
+import createNotification from "../utils/createNotification.js";
+import createActivityLog from "../utils/createActivityLog.js";
 
 export const createMaintenance = asyncHandler(async (req, res) => {
     const {

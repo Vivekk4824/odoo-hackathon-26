@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const notificationSchema = new mongoose.Schema(
+const activityLogSchema = new mongoose.Schema(
     {
         user: {
             type: mongoose.Schema.Types.ObjectId,
@@ -8,38 +8,36 @@ const notificationSchema = new mongoose.Schema(
             required: true,
         },
 
-        title: {
+        action: {
             type: String,
             required: true,
             trim: true,
         },
 
-        message: {
-            type: String,
-            required: true,
-        },
-
-        type: {
+        module: {
             type: String,
             enum: [
+                "Authentication",
+                "Department",
+                "Category",
+                "Employee",
+                "Asset",
                 "Allocation",
-                "Transfer",
                 "Booking",
                 "Maintenance",
                 "Audit",
-                "Reminder",
             ],
-            default: "Reminder",
+            required: true,
         },
 
-        link: {
+        description: {
             type: String,
             default: "",
         },
 
-        isRead: {
-            type: Boolean,
-            default: false,
+        ipAddress: {
+            type: String,
+            default: "",
         },
     },
     {
@@ -47,4 +45,4 @@ const notificationSchema = new mongoose.Schema(
     }
 );
 
-export default mongoose.model("Notification", notificationSchema);
+export default mongoose.model("ActivityLog", activityLogSchema);

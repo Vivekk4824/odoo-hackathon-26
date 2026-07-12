@@ -3,6 +3,8 @@ import asyncHandler from "express-async-handler";
 import Allocation from "../models/Allocation.js";
 import Asset from "../models/Asset.js";
 import User from "../models/User.js";
+import createNotification from "../utils/createNotification.js";
+import createActivityLog from "../utils/createActivityLog.js";
 
 export const createAllocation = asyncHandler(async (req, res) => {
     const {

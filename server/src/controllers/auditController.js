@@ -3,6 +3,8 @@ import asyncHandler from "express-async-handler";
 import Audit from "../models/Audit.js";
 import Asset from "../models/Asset.js";
 import Department from "../models/Department.js";
+import createNotification from "../utils/createNotification.js";
+import createActivityLog from "../utils/createActivityLog.js";
 
 export const createAudit = asyncHandler(async (req, res) => {
     const {
