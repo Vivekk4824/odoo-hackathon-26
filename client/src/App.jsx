@@ -27,7 +27,10 @@ function App() {
             path="/dashboard"
             element={<Dashboard />}
           />
-
+          <Route
+            path="/reports"
+            element={<Reports />}
+          />
           <Route
             path="/organization-setup"
             element={<OrganizationSetup />}
