@@ -9,6 +9,8 @@ import departmentRoutes from "./routes/departmentRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import employeeRoutes from "./routes/employeeRoutes.js";
 import assetRoutes from "./routes/assetRoutes.js";
+import allocationRoutes from "./routes/allocationRoutes.js";
+
 const app = express();
 
 app.use(cors());
@@ -28,6 +30,8 @@ app.use("/api/departments", departmentRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/employees", employeeRoutes);
 app.use("/api/assets", assetRoutes);
+app.use("/api/allocations", allocationRoutes);
+
 app.use(notFound);
 app.use(errorHandler);
 
