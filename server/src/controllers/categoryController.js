@@ -1,6 +1,8 @@
 import asyncHandler from "express-async-handler";
 
 import Category from "../models/Category.js";
+import createNotification from "../utils/createNotification.js";
+import createActivityLog from "../utils/createActivityLog.js";
 
 export const createCategory = asyncHandler(async (req, res) => {
     const { name, description, warrantyPeriod } = req.body;

@@ -2,6 +2,8 @@ import asyncHandler from "express-async-handler";
 
 import Asset from "../models/Asset.js";
 import generateAssetTag from "../utils/generateAssetTag.js";
+import createNotification from "../utils/createNotification.js";
+import createActivityLog from "../utils/createActivityLog.js";
 
 import Allocation from "../models/Allocation.js";
 import Maintenance from "../models/Maintenance.js";

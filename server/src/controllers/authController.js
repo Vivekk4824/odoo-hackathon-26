@@ -5,6 +5,8 @@ import crypto from "crypto";
 import User from "../models/User.js";
 import generateToken from "../utils/generateToken.js";
 import sendEmail from "../utils/uploadFile.js";
+import createNotification from "../utils/createNotification.js";
+import createActivityLog from "../utils/createActivityLog.js";
 
 export const signup = asyncHandler(async (req, res) => {
     const { name, email, password } = req.body;

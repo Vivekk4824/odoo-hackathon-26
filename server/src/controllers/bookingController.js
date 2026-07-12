@@ -2,6 +2,8 @@ import asyncHandler from "express-async-handler";
 
 import Booking from "../models/Booking.js";
 import Asset from "../models/Asset.js";
+import createNotification from "../utils/createNotification.js";
+import createActivityLog from "../utils/createActivityLog.js";
 
 export const createBooking = asyncHandler(async (req, res) => {
     const {
